@@ -1,12 +1,12 @@
 export const servicesStyles = {
-  section: "py-28 bg-white dark:bg-[#0a1628] relative overflow-hidden",
+  section: "py-16 lg:py-28 bg-white dark:bg-[#0a1628] relative overflow-hidden",
   topBorder:
     "absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-border to-transparent",
 
   container: "container mx-auto px-6 lg:px-8 max-w-7xl",
 
   // Header
-  headerWrapper: "text-center max-w-2xl mx-auto mb-20",
+  headerWrapper: "text-center max-w-2xl mx-auto mb-12 lg:mb-20",
   headerBadge:
     "inline-flex items-center rounded-full border border-[#1a73e8]/20 bg-[#1a73e8]/5 px-4 py-1.5 text-xs font-semibold text-[#1a73e8] tracking-wide uppercase mb-6",
   headerTitle:

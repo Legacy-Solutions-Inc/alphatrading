@@ -89,12 +89,12 @@ export function Navbar() {
               </Link>
             ))}
             <div className={navbarStyles.drawerDivider}>
-              <Button
+              {/* <Button
                 variant="outline"
                 className={navbarStyles.drawerOutlineBtn}
               >
                 Sign In
-              </Button>
+              </Button> */}
               <Link href="#contact" className="w-full">
                 <Button className={navbarStyles.drawerPrimaryBtn}>
                   Get A Quote

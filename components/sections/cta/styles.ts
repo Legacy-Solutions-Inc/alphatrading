@@ -1,5 +1,5 @@
 export const ctaStyles = {
-  section: "py-28 bg-[#f8fafc] dark:bg-[#0a1628] flex justify-center",
+  section: "py-16 lg:py-28 bg-[#f8fafc] dark:bg-[#0a1628] flex justify-center",
   container: "container px-4 md:px-6 w-full max-w-5xl",
 
   // Wrapper - adding a card-like floating effect

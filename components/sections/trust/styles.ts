@@ -1,5 +1,5 @@
 export const trustStyles = {
-  section: "py-28 bg-[#f8fafc] dark:bg-[#0d1f3c] relative overflow-hidden",
+  section: "py-16 lg:py-28 bg-[#f8fafc] dark:bg-[#0d1f3c] relative overflow-hidden",
   orbRight:
     "absolute -right-80 -top-80 w-[700px] h-[700px] rounded-full bg-[#1a73e8]/[0.03] blur-[80px] pointer-events-none",
   orbLeft:

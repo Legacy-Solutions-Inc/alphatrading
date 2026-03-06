@@ -1,9 +1,9 @@
 export const whyChooseStyles = {
-  section: "py-24 bg-white dark:bg-[#0a1628] overflow-hidden",
+  section: "py-14 lg:py-24 bg-white dark:bg-[#0a1628] overflow-hidden",
   container:
     "container mx-auto px-6 lg:px-8 max-w-7xl",
   grid:
-    "grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center",
+    "grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center",
 
   /* ── LEFT: Image card ── */
   imageWrapper:

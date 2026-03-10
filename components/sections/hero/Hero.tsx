@@ -25,9 +25,7 @@ export function Hero() {
 
         {/* Description */}
         <p className={heroStyles.description}>
-          Streamline your supply chain with seamless logistics solutions. We
-          handle customs, compliance, and transport so you can focus on growing
-          your business.
+          Alpha Trade is your local partner for fast, reliable China imports. We cut Manila middlemen, speed up delivery, and make group shipping affordable. Built in Iloilo, for Iloilo businesses.
         </p>
 
         {/* CTA Buttons */}
@@ -36,15 +34,11 @@ export function Hero() {
             Start Importing Now
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </a>
-          <a href="mailto:inquire@alphatrade.ph" className={heroStyles.secondaryBtn}>
-            <Mail className="h-4 w-4 text-[#1a73e8]" />
-            inquire@alphatrade.ph
-          </a>
         </div>
 
         {/* Trust indicators */}
         <div className={heroStyles.trustRow}>
-          {["Fully Licensed", "Customs Cleared", "Door-to-Door"].map((item) => (
+          {["Fully Licensed", "Customs Cleared", "Door-to-Door", "Based in Iloilo"].map((item) => (
             <div key={item} className={heroStyles.trustItem}>
               <CheckCircle2 className="h-4 w-4 text-emerald-500 flex-shrink-0" />
               <span>{item}</span>
@@ -55,13 +49,22 @@ export function Hero() {
 
       {/* ── RIGHT: Full-bleed image ── */}
       <div className={heroStyles.rightPane}>
-        <img
-          src="/images/hero-shipping.png"
-          alt="Aerial view of container ship at sea — Alpha Trade logistics"
-          className={heroStyles.image}
-        />
-        {/* Soft fade on the left edge so it blends into the white content pane */}
-        <div className={heroStyles.imageOverlayLeft} />
+        <div className={heroStyles.imageWrapper}>
+          <img
+            src="/images/hero-shipping.png"
+            alt="Aerial view of container ship at sea — Alpha Trade logistics"
+            className={heroStyles.image}
+          />
+
+          {/* Mobile badges per design request calculation */}
+          <div className={heroStyles.badgeRowOverlay}>
+            <span className={heroStyles.badgeFast}>Fast</span>
+            <span className={heroStyles.badgeReliable}>Reliable</span>
+          </div>
+
+          {/* Soft fade on the left edge so it blends into the white content pane */}
+          <div className={heroStyles.imageOverlayLeft} />
+        </div>
       </div>
     </section>
   );

@@ -7,7 +7,7 @@ export const whyChooseStyles = {
 
   /* ── LEFT: Image card ── */
   imageWrapper:
-    "relative rounded-2xl overflow-hidden shadow-2xl shadow-black/10 aspect-[4/3] group bg-[#0c3b6a]",
+    "hidden lg:block relative rounded-2xl overflow-hidden shadow-2xl shadow-black/10 aspect-[4/3] group bg-[#0c3b6a]",
   image:
     "absolute inset-0 w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105",
   imageOverlay:

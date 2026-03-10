@@ -11,7 +11,7 @@ export const servicesStyles = {
     "inline-flex items-center rounded-full border border-[#1a73e8]/20 bg-[#1a73e8]/5 px-4 py-1.5 text-xs font-semibold text-[#1a73e8] tracking-wide uppercase mb-6",
   headerTitle:
     "text-3xl md:text-4xl lg:text-[2.75rem] font-extrabold text-foreground mb-5 tracking-tight",
-  headerSubtitle: "text-lg text-muted-foreground leading-relaxed",
+  headerSubtitle: "text-lg text-muted-foreground leading-relaxed text-left md:text-center",
 
   // Cards grid
   grid: "grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8",

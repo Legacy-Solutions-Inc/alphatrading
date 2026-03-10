@@ -34,15 +34,25 @@ export const heroStyles = {
     "inline-flex items-center justify-center gap-2 rounded-lg h-12 sm:h-13 px-7 py-3 text-[15px] font-semibold border-2 border-[#d0dae8] dark:border-[#1e3351] text-[#0a1628] dark:text-white bg-transparent hover:bg-[#f4f7fc] dark:hover:bg-[#111d32] transition-all duration-200",
 
   // Trust strip
-  trustRow: "flex flex-wrap items-center gap-x-5 gap-y-2",
+  trustRow: "grid grid-cols-2 gap-x-2 gap-y-3 sm:flex sm:flex-wrap items-center sm:gap-x-5 sm:gap-y-2",
   trustItem:
-    "flex items-center gap-1.5 text-[13px] font-medium text-[#5a6f87] dark:text-[#8fa3bf]",
+    "flex items-center gap-1.5 text-[13px] font-medium text-[#5a6f87] dark:text-[#8fa3bf] whitespace-nowrap",
 
-  // RIGHT image pane — shown as block on mobile (aspect 16/9), full-height absolute on desktop
+  // RIGHT image pane
   rightPane:
-    "relative w-full lg:w-1/2 aspect-[16/9] lg:aspect-auto",
+    "relative w-full lg:w-1/2 aspect-[4/3] sm:aspect-[16/9] lg:aspect-auto px-4 pb-12 sm:px-10 lg:px-0 lg:pb-0",
+  imageWrapper:
+    "relative w-full h-full rounded-2xl lg:rounded-none overflow-hidden shadow-2xl lg:shadow-none",
   image:
     "absolute inset-0 w-full h-full object-cover object-center",
   imageOverlayLeft:
     "hidden lg:block absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white dark:from-[#0a1628] to-transparent pointer-events-none",
+
+  // Badge row (FAST · RELIABLE) for mobile hero image
+  badgeRowOverlay:
+    "absolute top-4 left-4 lg:hidden flex gap-2 z-20",
+  badgeFast:
+    "rounded-md px-3 py-1 text-[11px] font-bold tracking-widest uppercase text-white bg-emerald-500 shadow",
+  badgeReliable:
+    "rounded-md px-3 py-1 text-[11px] font-bold tracking-widest uppercase text-white bg-[#1a73e8] shadow",
 } as const;

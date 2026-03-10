@@ -6,7 +6,7 @@ const features = [
     icon: MapPin,
     title: "Proudly Iloilo-Born",
     description:
-      "Local presence means local accountability. Visit our office in Mandurriao anytime. We speak your language.",
+      "Local presence means local accountability. We know your market and speak your language.",
   },
   {
     icon: Zap,
@@ -53,7 +53,7 @@ export function WhyChoose() {
           <div className={whyChooseStyles.content}>
             <h2 className={whyChooseStyles.heading}>
               Why Choose{" "}
-              <span className={whyChooseStyles.headingAccent}>Alpha Trade?</span>
+              <span className="text-gradient-primary">Alpha Trade?</span>
             </h2>
             <p className={whyChooseStyles.description}>
               We understand the unique challenges of Visayas businesses. Our

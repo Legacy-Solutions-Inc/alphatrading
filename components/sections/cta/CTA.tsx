@@ -11,10 +11,22 @@ import { ctaStyles } from "./styles";
 
 export function CTA() {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error" | "rate_limited">("idle");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    const now = Date.now();
+    const oneHour = 60 * 60 * 1000;
+    const storedSubmissions = localStorage.getItem("cta_submissions");
+    let submissions: number[] = storedSubmissions ? JSON.parse(storedSubmissions) : [];
+    submissions = submissions.filter((timestamp: number) => now - timestamp < oneHour);
+
+    if (submissions.length >= 2) {
+      setSubmitStatus("rate_limited");
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitStatus("idle");
 
@@ -35,6 +47,8 @@ export function CTA() {
       });
 
       if (response.ok) {
+        submissions.push(now);
+        localStorage.setItem("cta_submissions", JSON.stringify(submissions));
         setSubmitStatus("success");
         (e.target as HTMLFormElement).reset();
       } else {
@@ -120,6 +134,11 @@ export function CTA() {
                 {submitStatus === "error" && (
                   <div className="p-4 bg-red-50 dark:bg-red-500/10 border border-red-200 dark:border-red-500/50 rounded-lg text-red-600 dark:text-red-400 text-sm mb-6 animate-in fade-in">
                     Failed to send message. Please try again or contact us directly via email.
+                  </div>
+                )}
+                {submitStatus === "rate_limited" && (
+                  <div className="p-4 bg-orange-50 dark:bg-orange-500/10 border border-orange-200 dark:border-orange-500/50 rounded-lg text-orange-600 dark:text-orange-400 text-sm mb-6 animate-in fade-in">
+                    You have reached the limit of 2 messages per hour. Please try again later or contact us directly.
                   </div>
                 )}
                 <div className={ctaStyles.fieldGroup}>

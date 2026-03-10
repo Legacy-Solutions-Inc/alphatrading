@@ -49,7 +49,5 @@ export const trustStyles = {
   reasonContent: "flex-1",
   reasonHeader: "flex items-center gap-3 mb-1.5",
   reasonTitle: "text-lg font-bold text-foreground",
-  reasonMetric:
-    "text-xs font-semibold text-[#1a73e8] bg-[#1a73e8]/10 px-2 py-0.5 rounded-full",
   reasonDescription: "text-[15px] text-muted-foreground leading-relaxed",
 } as const;

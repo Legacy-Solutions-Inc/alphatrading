@@ -10,29 +10,23 @@ import { trustStyles } from "./styles";
 
 const reasons = [
   {
-    title: "Trusted by Locals",
-    description:
-      "Deeply rooted in Iloilo with a decade of experience. We understand the local business landscape and build lasting partnerships.",
-    icon: Handshake,
-    metric: "10+",
-    metricLabel: "Years in Iloilo",
-  },
-  {
     title: "Fully Compliant",
     description:
-      "Licensed customs brokerage with strict adherence to BOC and DENR import regulations. Your cargo is never delayed by compliance issues.",
+      "Licensed Importer/Exporter, registered with DTI and accredited by the Bureau of Customs.",
     icon: ShieldCheck,
-    metric: "100%",
-    metricLabel: "Compliance Rate",
   },
   {
     title: "Strategically Connected",
     description:
-      "Direct partnerships with top-tier shipping lines and verified China suppliers, unlocking preferential rates and priority loading.",
+      "Logistics Network with office in Hong Kong for coordination and warehouse in Shenzhen for fast consolidation.",
     icon: TrendingUp,
-    metric: "30+",
-    metricLabel: "Shipping Partners",
   },
+  {
+    title: "Trusted by Locals",
+    description:
+      "Deeply rooted in Iloilo with a decade of experience. We understand the local business landscape and build lasting partnerships.",
+    icon: Handshake,
+  }
 ];
 
 const stats = [
@@ -59,40 +53,16 @@ export function Trust() {
               />
               <div className={trustStyles.imageOverlay} />
             </div>
-
-            {/* Floating certification badge */}
-            <div className={trustStyles.floatingBadge}>
-              <div className="flex items-center gap-3">
-                <div className={trustStyles.floatingBadgeIcon}>
-                  <ShieldCheck className="h-6 w-6" />
-                </div>
-                <div>
-                  <p className={trustStyles.floatingBadgeTitle}>Certified</p>
-                  <p className={trustStyles.floatingBadgeLabel}>
-                    Licensed Customs Broker
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Stats row below image */}
-            <div className={trustStyles.statsGrid}>
-              {stats.map((stat, i) => (
-                <div key={i} className={trustStyles.statCard}>
-                  <stat.icon className="h-5 w-5 text-[#1a73e8] mx-auto mb-2" />
-                  <p className={trustStyles.statValue}>{stat.value}</p>
-                  <p className={trustStyles.statLabel}>{stat.label}</p>
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* Right - Content */}
           <div className={trustStyles.rightColumn}>
 
             <h2 className={trustStyles.title}>
-              Your Strategic Partner for{" "}
-              <span className="text-gradient-primary">Seamless Growth</span>
+              Partner with{" "}
+              <span className="text-gradient-primary">Alpha Trade</span>
+              <br />
+              for Seamless Growth
             </h2>
 
             <p className={trustStyles.subtitle}>
@@ -114,9 +84,6 @@ export function Trust() {
                       <h4 className={trustStyles.reasonTitle}>
                         {reason.title}
                       </h4>
-                      <span className={trustStyles.reasonMetric}>
-                        {reason.metric} {reason.metricLabel}
-                      </span>
                     </div>
                     <p className={trustStyles.reasonDescription}>
                       {reason.description}

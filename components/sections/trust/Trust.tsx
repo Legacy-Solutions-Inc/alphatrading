@@ -53,7 +53,7 @@ export function Trust() {
           <div className={trustStyles.leftColumn}>
             <div className={trustStyles.imageWrapper}>
               <img
-                src="/trust-port.png"
+                src="/images/trust-port.png"
                 alt="Container ship operations at port"
                 className={trustStyles.image}
               />

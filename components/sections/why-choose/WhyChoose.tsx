@@ -31,7 +31,7 @@ export function WhyChoose() {
           {/* ── LEFT: Image card ── */}
           <div className={whyChooseStyles.imageWrapper}>
             <img
-              src="/manila-international-container-terminal-5.jpg"
+              src="/images/manila-international-container-terminal-5.jpg"
               alt="Container ship connecting Visayas to the world's factory floor"
               className={whyChooseStyles.image}
             />

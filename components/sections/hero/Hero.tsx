@@ -56,7 +56,7 @@ export function Hero() {
       {/* ── RIGHT: Full-bleed image ── */}
       <div className={heroStyles.rightPane}>
         <img
-          src="/hero-shipping.png"
+          src="/images/hero-shipping.png"
           alt="Aerial view of container ship at sea — Alpha Trade logistics"
           className={heroStyles.image}
         />

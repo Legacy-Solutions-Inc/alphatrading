@@ -22,6 +22,9 @@ export const metadata: Metadata = {
     "warehousing",
     "Philippines shipping",
   ],
+  icons: {
+    icon: "/images/alpha-icon.jpg",
+  },
 };
 
 export default function RootLayout({

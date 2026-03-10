@@ -11,7 +11,7 @@ export const navbarStyles = {
   // Logo
   logoLink: "flex items-center gap-3 group",
   logoIcon:
-    "relative flex h-11 w-11 items-center justify-center rounded-xl bg-[#0c3b6a] text-white shadow-lg shadow-[#0c3b6a]/30 transition-transform group-hover:scale-105",
+    "relative flex h-11 w-11 items-center justify-center transition-transform group-hover:scale-105",
   logoGradient:
     "absolute inset-0 rounded-xl bg-gradient-to-br from-white/20 to-transparent",
   logoTitle:

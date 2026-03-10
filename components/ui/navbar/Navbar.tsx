@@ -31,9 +31,8 @@ export function Navbar() {
           <div className={navbarStyles.logoIcon}>
             <img src="/images/alpha-icon.jpg" alt="Alpha Trade Logo" className="h-11 w-11 object-cover rounded-xl" />
           </div>
-          <div className="flex flex-col">
-            <span className={navbarStyles.logoTitle}>Alpha Trade</span>
-            <span className={navbarStyles.logoSubtitle}>Logistics</span>
+          <div className="flex flex-col justify-center">
+            <span className={navbarStyles.logoTitle}>Alpha Trade Corp.</span>
           </div>
         </Link>
 

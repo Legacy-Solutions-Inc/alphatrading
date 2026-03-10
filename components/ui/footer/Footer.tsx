@@ -33,8 +33,8 @@ export function Footer() {
               <div className={footerStyles.logoIcon}>
                 <img src="/images/alpha-icon.jpg" alt="Alpha Trade Logo" className="h-8 w-8 object-cover rounded" />
               </div>
-              <div className="flex flex-col">
-                <span className={footerStyles.logoTitle}>Alpha Trade</span>
+              <div className="flex flex-col justify-center">
+                <span className={footerStyles.logoTitle}>Alpha Trade Corp.</span>
               </div>
             </Link>
 
@@ -86,8 +86,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className={footerStyles.bottomBar}>
           <p className={footerStyles.copyright}>
-            &copy; {new Date().getFullYear()} Alpha Trade Logistics Corp. All
-            rights reserved.
+            &copy; {new Date().getFullYear()} Alpha Trade Corp. All rights reserved.
           </p>
           <div className={footerStyles.bottomLinks}>
             <Link href="#" className={footerStyles.bottomLink}>

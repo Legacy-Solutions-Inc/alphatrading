@@ -31,73 +31,31 @@ export function Footer() {
           <div className={footerStyles.brandColumn}>
             <Link href="/" className={footerStyles.logoLink}>
               <div className={footerStyles.logoIcon}>
-                <Ship className="h-6 w-6 text-white" />
+                <img src="/images/alpha-icon.jpg" alt="Alpha Trade Logo" className="h-8 w-8 object-cover rounded" />
               </div>
               <div className="flex flex-col">
                 <span className={footerStyles.logoTitle}>Alpha Trade</span>
-                <span className={footerStyles.logoSubtitle}>Logistics</span>
               </div>
             </Link>
 
             <p className={footerStyles.brandDescription}>
-              Your trusted partner in Iloilo for fast, reliable, and fully
-              compliant China imports. Streamlining logistics for your seamless
-              business growth since 2014.
+              Your trusted partner in Iloilo for fast, reliable,
+              and fully compliant China imports.
             </p>
-
-            {/* <div className={footerStyles.socialRow}>
-              {["Facebook", "LinkedIn", "Twitter"].map((name) => (
-                <Link
-                  key={name}
-                  href="#"
-                  className={footerStyles.socialLink}
-                >
-                  {name[0]}
-                </Link>
-              ))}
-            </div> */}
           </div>
 
-          {/* Services */}
-          <div className={footerStyles.linkColumn}>
-            <h3 className={footerStyles.linkHeading}>Services</h3>
-            <ul className={footerStyles.linkList}>
-              {footerLinks.services.map((link) => (
-                <li key={link.label}>
-                  <Link href={link.href} className={footerStyles.linkItem}>
-                    {link.label}
-                    <ArrowUpRight className={footerStyles.linkArrow} />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
 
-          {/* Company */}
-          <div className={footerStyles.linkColumn}>
-            <h3 className={footerStyles.linkHeading}>Company</h3>
-            <ul className={footerStyles.linkList}>
-              {footerLinks.company.map((link) => (
-                <li key={link.label}>
-                  <Link href={link.href} className={footerStyles.linkItem}>
-                    {link.label}
-                    <ArrowUpRight className={footerStyles.linkArrow} />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
 
           {/* Contact */}
           <div className={footerStyles.contactColumn}>
-            <h3 className={footerStyles.linkHeading}>Get In Touch</h3>
+            <h3 className={`${footerStyles.linkHeading} ml-12`}>Get In Touch</h3>
             <div className="space-y-4">
               <div className={footerStyles.contactItem}>
                 <div className={footerStyles.contactIcon}>
                   <Mail className="h-4 w-4" />
                 </div>
                 <span className={footerStyles.contactText}>
-                  info@alphatrade.ph
+                  sales@alphatrade.ph
                 </span>
               </div>
               <div className={footerStyles.contactItem}>
@@ -105,18 +63,21 @@ export function Footer() {
                   <Phone className="h-4 w-4" />
                 </div>
                 <span className={footerStyles.contactText}>
-                  +63 (33) 123 4567
+                  +63 927 142 2793
                 </span>
               </div>
-              <div className={footerStyles.contactItemStart}>
-                <div className={`${footerStyles.contactIcon} mt-0.5`}>
+              <div className={footerStyles.contactItem}>
+                <div className={footerStyles.contactIcon}>
                   <MapPin className="h-4 w-4" />
                 </div>
-                <span className={footerStyles.contactText}>
-                  Iloilo Business Park,
-                  <br />
-                  Mandurriao, Iloilo City 5000
-                </span>
+                <a
+                  href="https://facebook.com/alpha.trade.corp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${footerStyles.contactText} hover:text-white hover:underline transition-colors`}
+                >
+                  facebook.com/alpha.trade.corp
+                </a>
               </div>
             </div>
           </div>

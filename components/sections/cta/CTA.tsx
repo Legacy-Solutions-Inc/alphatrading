@@ -26,22 +26,33 @@ export function CTA() {
 
             <div className={ctaStyles.leftContactWrapper}>
               <div className={ctaStyles.contactItem}>
-                <Phone className={`h-5 w-5 ${ctaStyles.contactIcon}`} />
+                <div className={ctaStyles.contactIcon}>
+                  <Phone className="h-5 w-5" />
+                </div>
                 <span className={ctaStyles.contactText}>
-                  +63 (033) 123-4567
+                  +63 927 142 2793
                 </span>
               </div>
               <div className={ctaStyles.contactItem}>
-                <Mail className={`h-5 w-5 ${ctaStyles.contactIcon}`} />
+                <div className={ctaStyles.contactIcon}>
+                  <Mail className="h-5 w-5" />
+                </div>
                 <span className={ctaStyles.contactText}>
                   sales@alphatrade.ph
                 </span>
               </div>
               <div className={ctaStyles.contactItem}>
-                <MapPin className={`h-5 w-5 ${ctaStyles.contactIcon}`} />
-                <span className={ctaStyles.contactText}>
-                  Mandurriao, Iloilo City
-                </span>
+                <div className={ctaStyles.contactIcon}>
+                  <MapPin className="h-5 w-5" />
+                </div>
+                <a
+                  href="https://facebook.com/alpha.trade.corp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${ctaStyles.contactText} hover:underline decoration-white/30 hover:text-white transition-colors cursor-pointer`}
+                >
+                  facebook.com/alpha.trade.corp
+                </a>
               </div>
             </div>
           </div>

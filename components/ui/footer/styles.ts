@@ -6,10 +6,10 @@ export const footerStyles = {
 
   container: "container mx-auto max-w-7xl px-6 lg:px-8 relative z-10",
   mainGrid:
-    "py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8",
+    "py-16 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-8 justify-between",
 
   // Brand column
-  brandColumn: "lg:col-span-4 flex flex-col gap-6",
+  brandColumn: "flex flex-col gap-6",
   logoLink: "flex items-center gap-3 group",
   logoIcon:
     "relative flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 border border-white/10 transition-all group-hover:bg-white/15",
@@ -32,7 +32,7 @@ export const footerStyles = {
     "h-3 w-3 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all",
 
   // Contact column
-  contactColumn: "lg:col-span-4",
+  contactColumn: "md:justify-self-end",
   contactItem: "flex items-center gap-3 group",
   contactItemStart: "flex items-start gap-3 group",
   contactIcon:

@@ -12,7 +12,6 @@ export default function Home() {
       <WhyChoose />
       <Services />
       <Trust />
-      <Testimonials />
       <CTA />
     </>
   );

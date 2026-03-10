@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Ship, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { navbarStyles } from "./styles";
 
 const navLinks = [
@@ -29,8 +29,7 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/" className={navbarStyles.logoLink}>
           <div className={navbarStyles.logoIcon}>
-            <Ship className="h-6 w-6" />
-            <div className={navbarStyles.logoGradient} />
+            <img src="/images/alpha-icon.jpg" alt="Alpha Trade Logo" className="h-11 w-11 object-cover rounded-xl" />
           </div>
           <div className="flex flex-col">
             <span className={navbarStyles.logoTitle}>Alpha Trade</span>

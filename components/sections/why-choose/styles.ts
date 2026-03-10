@@ -1,45 +1,33 @@
 export const whyChooseStyles = {
-  section: "py-14 lg:py-24 bg-white dark:bg-[#0a1628] overflow-hidden",
-  container:
-    "container mx-auto px-6 lg:px-8 max-w-7xl",
-  grid:
-    "grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center",
+  section: "py-16 lg:py-24 bg-slate-50 dark:bg-[#030b17] overflow-hidden",
+  container: "container mx-auto px-6 lg:px-8 max-w-7xl",
+  grid: "grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center",
 
   /* ── LEFT: Image card ── */
-  imageWrapper:
-    "relative rounded-2xl overflow-hidden shadow-2xl shadow-black/10 aspect-[4/3] group bg-[#0c3b6a]",
-  image:
-    "absolute inset-0 w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105",
-  imageOverlay:
-    "absolute inset-0 bg-gradient-to-t from-[#0a1628]/80 via-[#0a1628]/20 to-transparent",
+  imageWrapper: "hidden lg:block relative rounded-3xl overflow-hidden shadow-xl shadow-slate-200/50 dark:shadow-none aspect-[4/3] group bg-[#0c3b6a]",
+  image: "absolute inset-0 w-full h-full object-cover opacity-90 transition-transform duration-700 ease-out group-hover:scale-105",
+  imageOverlay: "absolute inset-0 bg-gradient-to-t from-[#0a1628]/80 via-[#0a1628]/20 to-transparent",
 
   // Badge row (FAST · RELIABLE)
-  badgeRow:
-    "absolute top-4 left-4 flex gap-2",
-  badgeFast:
-    "rounded-md px-3 py-1 text-[11px] font-bold tracking-widest uppercase text-white bg-emerald-500 shadow",
-  badgeReliable:
-    "rounded-md px-3 py-1 text-[11px] font-bold tracking-widest uppercase text-white bg-[#1a73e8] shadow",
+  badgeRow: "absolute top-5 left-5 flex gap-2.5 z-10",
+  badgeFast: "rounded-lg px-3 py-1.5 text-[11px] font-black tracking-widest uppercase text-white bg-emerald-500 shadow-sm",
+  badgeReliable: "rounded-lg px-3 py-1.5 text-[11px] font-black tracking-widest uppercase text-white bg-blue-600 shadow-sm",
 
   // Caption
-  caption:
-    "absolute bottom-4 left-4 right-4 text-white/90 text-[13px] font-medium italic",
+  caption: "absolute bottom-5 left-5 right-5 text-white/95 text-sm font-medium italic z-10 text-shadow-sm",
 
   /* ── RIGHT: Content ── */
   content: "flex flex-col",
-  heading:
-    "text-3xl md:text-4xl font-extrabold tracking-tight text-[#0a1628] dark:text-white mb-4 leading-tight",
-  headingAccent: "text-[#1a73e8]",
-  description:
-    "text-[15px] text-[#5a6f87] dark:text-[#8fa3bf] leading-relaxed mb-10 max-w-lg",
+  heading: "text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-5 leading-tight",
+  headingAccent: "text-gradient-primary",
+  description: "text-base md:text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-10 max-w-xl",
 
   // Feature list
-  featureList: "space-y-8",
-  featureItem: "flex items-start gap-4 group",
-  featureIconWrapper:
-    "flex-shrink-0 mt-0.5 h-10 w-10 rounded-xl bg-[#1a73e8]/10 dark:bg-[#1a73e8]/15 flex items-center justify-center text-[#1a73e8] group-hover:bg-[#1a73e8] group-hover:text-white transition-colors duration-300",
-  featureTitle:
-    "font-bold text-[16px] text-[#0a1628] dark:text-white mb-1",
-  featureDesc:
-    "text-[14px] text-[#5a6f87] dark:text-[#8fa3bf] leading-relaxed",
+  featureList: "grid grid-cols-1 gap-4",
+  featureItem: "flex items-start gap-4 group p-5 rounded-2xl bg-white dark:bg-[#111d32] border border-slate-100 dark:border-slate-800 transition-all duration-300 hover:shadow-lg hover:shadow-slate-200/40 dark:hover:shadow-none hover:-translate-y-1 hover:border-blue-100",
+
+  featureIconWrapper: "flex-shrink-0 mt-0.5 h-12 w-12 rounded-xl bg-blue-50 dark:bg-[#1a73e8]/15 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 group-hover:scale-105 shadow-sm border border-slate-100",
+
+  featureTitle: "font-bold text-lg text-slate-900 dark:text-white mb-1.5 tracking-tight group-hover:text-blue-600 transition-colors",
+  featureDesc: "text-sm text-slate-600 dark:text-slate-400 leading-relaxed",
 } as const;

@@ -1,35 +1,38 @@
 export const servicesStyles = {
-  section: "py-16 lg:py-28 bg-white dark:bg-[#0a1628] relative overflow-hidden",
-  topBorder:
-    "absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-border to-transparent",
+  section: "py-16 lg:py-24 bg-slate-50 dark:bg-[#030b17] relative overflow-hidden",
+  topBorder: "absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent",
 
-  container: "container mx-auto px-6 lg:px-8 max-w-7xl",
+  container: "container mx-auto px-6 lg:px-8 max-w-7xl relative z-10",
 
   // Header
-  headerWrapper: "text-center max-w-2xl mx-auto mb-12 lg:mb-20",
-  headerBadge:
-    "inline-flex items-center rounded-full border border-[#1a73e8]/20 bg-[#1a73e8]/5 px-4 py-1.5 text-xs font-semibold text-[#1a73e8] tracking-wide uppercase mb-6",
-  headerTitle:
-    "text-3xl md:text-4xl lg:text-[2.75rem] font-extrabold text-foreground mb-5 tracking-tight",
-  headerSubtitle: "text-lg text-muted-foreground leading-relaxed",
+  headerWrapper: "text-center max-w-2xl mx-auto mb-12 lg:mb-16",
+  headerTitle: "text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight mb-4",
+  headerSubtitle: "text-base md:text-lg text-slate-600 dark:text-slate-400 font-medium",
 
   // Cards grid
-  grid: "grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8",
+  grid: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8",
 
-  // Card
-  card: "group relative rounded-3xl bg-gradient-to-br from-[#f8fafc] to-white dark:from-[#111d32] dark:to-[#0d1f3c] border border-border/50 dark:border-[#1e3351]/50 p-8 lg:p-10 transition-all duration-500 hover:shadow-xl hover:shadow-black/[0.03] hover:-translate-y-1 hover:border-[#1a73e8]/20",
-  cardOverlay: "absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500",
-  cardContent: "relative z-10",
+  // Card base
+  card: "group relative rounded-[1.5rem] p-6 lg:p-8 transition-all duration-500 ease-out flex flex-col h-full",
+
+  // Apply a beautiful frosted/premium styling to normal cards
+  cardActive: "bg-gradient-to-br from-blue-600 to-indigo-700 text-white shadow-xl shadow-blue-900/10 -translate-y-1.5",
+  cardDefault: "bg-white dark:bg-[#0c182c] border border-slate-200/60 dark:border-slate-800 shadow-lg shadow-slate-200/40 dark:shadow-none hover:shadow-xl hover:shadow-slate-300/40 hover:-translate-y-1.5",
+
+  cardOverlay: "hidden", // using pure css capabilities instead
+  cardContent: "relative z-10 flex flex-col h-full",
 
   // Card header
   cardHeader: "flex items-start justify-between mb-6",
-  cardIcon:
-    "h-14 w-14 flex items-center justify-center rounded-2xl transition-transform duration-300 group-hover:scale-110",
-  cardArrow:
-    "h-10 w-10 flex items-center justify-center rounded-full bg-transparent group-hover:bg-[#0c3b6a] text-transparent group-hover:text-white transition-all duration-300",
+
+  // Icons get inverse styling based on active/default state
+  cardIcon: "h-12 w-12 flex items-center justify-center rounded-xl transition-transform duration-500 group-hover:scale-105",
+
+  // Arrows - elegant floating interaction
+  cardArrowActive: "h-8 w-8 flex items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5",
+  cardArrowDefault: "h-8 w-8 flex items-center justify-center rounded-full bg-slate-50 dark:bg-slate-800 text-slate-400 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 shadow-sm",
 
   // Card body
-  cardTitle:
-    "text-xl font-bold text-foreground mb-3 group-hover:text-[#0c3b6a] dark:group-hover:text-white transition-colors",
-  cardDescription: "text-[15px] text-muted-foreground leading-relaxed",
+  cardTitle: "text-xl font-bold mb-3 tracking-tight",
+  cardDescription: "text-sm leading-relaxed flex-grow",
 } as const;

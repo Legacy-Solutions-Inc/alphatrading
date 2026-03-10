@@ -7,27 +7,18 @@ const services = [
     description:
       "Full container load (FCL) and less than container load (LCL) shipping from major China ports with real-time tracking and competitive rates.",
     icon: Ship,
-    accent: "from-blue-500/10 to-cyan-500/10",
-    iconBg: "bg-blue-100 dark:bg-blue-900/30",
-    iconColor: "text-blue-600 dark:text-blue-400",
   },
   {
     title: "Customs Brokerage",
     description:
       "Licensed professionals handling all paperwork, tariff classifications, and regulatory requirements for smooth import clearance.",
     icon: Handshake,
-    accent: "from-blue-500/10 to-cyan-500/10",
-    iconBg: "bg-blue-100 dark:bg-blue-900/30",
-    iconColor: "text-blue-600 dark:text-blue-400",
   },
   {
     title: "Last-Mile Delivery",
     description:
       "Reliable door-to-door delivery service from our warehouses to your business location anywhere in Western Visayas.",
     icon: MapPinned,
-    accent: "from-blue-500/10 to-cyan-500/10",
-    iconBg: "bg-blue-100 dark:bg-blue-900/30",
-    iconColor: "text-blue-600 dark:text-blue-400",
   },
 ];
 
@@ -50,31 +41,37 @@ export function Services() {
 
         {/* Service Cards */}
         <div className={servicesStyles.grid}>
-          {services.map((service, index) => (
-            <div key={index} className={servicesStyles.card}>
+          {services.map((service, index) => {
+            return (
               <div
-                className={`${servicesStyles.cardOverlay} bg-gradient-to-br ${service.accent}`}
-              />
+                key={index}
+                className={`${servicesStyles.card} ${servicesStyles.cardDefault}`}
+              >
+                <div className={servicesStyles.cardContent}>
+                  <div className={servicesStyles.cardHeader}>
+                    <div
+                      className={`${servicesStyles.cardIcon} bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400`}
+                    >
+                      <service.icon className="h-6 w-6" strokeWidth={1.5} />
+                    </div>
 
-              <div className={servicesStyles.cardContent}>
-                <div className={servicesStyles.cardHeader}>
-                  <div
-                    className={`${servicesStyles.cardIcon} ${service.iconBg} ${service.iconColor}`}
+                    <div className={servicesStyles.cardArrowDefault}>
+                      <ArrowUpRight className="h-4 w-4" />
+                    </div>
+                  </div>
+
+                  <h3
+                    className={`${servicesStyles.cardTitle} text-slate-900 dark:text-white`}
                   >
-                    <service.icon className="h-7 w-7" />
-                  </div>
-                  <div className={servicesStyles.cardArrow}>
-                    <ArrowUpRight className="h-5 w-5" />
-                  </div>
+                    {service.title}
+                  </h3>
+                  <p className={servicesStyles.cardDescription}>
+                    {service.description}
+                  </p>
                 </div>
-
-                <h3 className={servicesStyles.cardTitle}>{service.title}</h3>
-                <p className={servicesStyles.cardDescription}>
-                  {service.description}
-                </p>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

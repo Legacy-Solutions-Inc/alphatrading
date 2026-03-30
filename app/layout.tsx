@@ -14,6 +14,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://alphatrade.ph"),
   title: "Alpha Trade | Your Iloilo Partner for Fast, Reliable China Imports",
   description:
     "Streamline your supply chain with Alpha Trade's end-to-end logistics solutions. Sea freight, customs brokerage, warehousing, and last-mile delivery from China to Iloilo.",

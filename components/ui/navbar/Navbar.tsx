@@ -9,7 +9,6 @@ import { navbarStyles } from "./styles";
 const navLinks = [
   { href: "#services", label: "Services" },
   { href: "#trust", label: "Why Us" },
-  { href: "#testimonials", label: "Testimonials" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -19,7 +18,7 @@ export function Navbar() {
 
   React.useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -29,7 +28,7 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/" className={navbarStyles.logoLink}>
           <div className={navbarStyles.logoIcon}>
-            <img src="/images/alpha-icon.jpg" alt="Alpha Trade Logo" className="h-11 w-11 object-cover rounded-xl" />
+            <img src="/images/alpha-icon.jpg" alt="Alpha Trade Logo" width={44} height={44} className="h-11 w-11 object-cover rounded-md" />
           </div>
           <div className="flex flex-col justify-center">
             <span className={navbarStyles.logoTitle}>Alpha Trade Corp.</span>
@@ -51,9 +50,6 @@ export function Navbar() {
 
         {/* Desktop CTA */}
         <div className={navbarStyles.desktopCta}>
-          {/* <Button variant="ghost" className={navbarStyles.signInBtn}>
-            Sign In
-          </Button> */}
           <Link href="#contact">
             <Button className={navbarStyles.quoteBtn}>Get A Quote</Button>
           </Link>
@@ -63,18 +59,21 @@ export function Navbar() {
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className={navbarStyles.mobileBtn}
+          aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={mobileOpen}
+          aria-controls="mobile-nav-drawer"
         >
           {mobileOpen ? (
-            <X className="h-5 w-5" />
+            <X className="h-5 w-5" aria-hidden="true" />
           ) : (
-            <Menu className="h-5 w-5" />
+            <Menu className="h-5 w-5" aria-hidden="true" />
           )}
         </button>
       </div>
 
       {/* Mobile Nav Drawer */}
       {mobileOpen && (
-        <div className={navbarStyles.drawer}>
+        <div id="mobile-nav-drawer" className={navbarStyles.drawer}>
           <div className={navbarStyles.drawerContainer}>
             {navLinks.map((link) => (
               <Link
@@ -87,12 +86,6 @@ export function Navbar() {
               </Link>
             ))}
             <div className={navbarStyles.drawerDivider}>
-              {/* <Button
-                variant="outline"
-                className={navbarStyles.drawerOutlineBtn}
-              >
-                Sign In
-              </Button> */}
               <Link href="#contact" className="w-full">
                 <Button className={navbarStyles.drawerPrimaryBtn}>
                   Get A Quote

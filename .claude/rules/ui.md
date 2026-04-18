@@ -14,10 +14,7 @@
 - Exception: styles.ts files currently use raw hex values — match existing pattern per section
 
 ## Custom CSS Classes (defined in globals.css)
-- .text-gradient-primary — navy-to-blue gradient text
-- .glass — glassmorphism (white/8% + backdrop blur)
-- Animations: .animate-float, .animate-shimmer, .animate-fade-in-up, .animate-fade-in, .animate-scale-in, .animate-slide-in-right, .animate-pulse-glow
-- Stagger delays: .delay-100 through .delay-700
+- None. Custom animations, gradient text, and glassmorphism utilities were removed in the aesthetic cleanup pass. Use Tailwind's built-in utilities and tw-animate-css classes (e.g. `animate-in fade-in`) where motion is needed.
 
 ## Shadcn Components
 - Style: new-york | Base color: neutral | CSS variables: enabled

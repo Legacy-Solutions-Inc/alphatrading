@@ -28,10 +28,13 @@ export const heroStyles = {
     "flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4 mb-8 lg:mb-10",
 
   primaryBtn:
-    "inline-flex items-center justify-center gap-2 rounded-lg h-12 sm:h-13 px-7 py-3 text-[15px] font-semibold bg-[#0c3b6a] hover:bg-[#0a2f54] text-white shadow-lg shadow-[#0c3b6a]/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl group",
+    "inline-flex items-center justify-center gap-3 rounded-full h-12 sm:h-13 pl-6 pr-2 text-[15px] font-semibold bg-[#0c3b6a] hover:bg-[#0a2f54] text-white shadow-lg shadow-[#0c3b6a]/20 transition-all duration-300 ease-[var(--ease-spring)] hover:-translate-y-0.5 hover:shadow-xl active:scale-[0.98] group",
 
-  secondaryBtn:
-    "inline-flex items-center justify-center gap-2 rounded-lg h-12 sm:h-13 px-7 py-3 text-[15px] font-semibold border-2 border-[#d0dae8] dark:border-[#1e3351] text-[#0a1628] dark:text-white bg-transparent hover:bg-[#f4f7fc] dark:hover:bg-[#111d32] transition-all duration-200",
+  primaryBtnIconWrap:
+    "flex items-center justify-center h-9 w-9 rounded-full bg-white/15 transition-transform duration-300 ease-[var(--ease-spring)] group-hover:scale-[1.08]",
+
+  primaryBtnIcon:
+    "h-3.5 w-3.5 transition-transform duration-300 ease-[var(--ease-spring)] group-hover:translate-x-0.5 group-hover:-translate-y-[1px]",
 
   // Trust strip
   trustRow: "grid grid-cols-2 gap-x-2 gap-y-3 sm:flex sm:flex-wrap items-center sm:gap-x-5 sm:gap-y-2",

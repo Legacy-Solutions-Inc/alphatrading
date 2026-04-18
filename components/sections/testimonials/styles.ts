@@ -15,7 +15,7 @@ export const testimonialsStyles = {
 
   // Cards
   grid: "grid grid-cols-1 md:grid-cols-3 gap-8",
-  card: "group relative rounded-3xl bg-gradient-to-br from-[#f8fafc] to-white dark:from-[#111d32] dark:to-[#0d1f3c] border border-border/50 dark:border-[#1e3351]/50 p-8 lg:p-10 transition-all duration-500 hover:shadow-xl hover:shadow-black/[0.03] hover:-translate-y-1",
+  card: "group relative rounded-2xl bg-gradient-to-br from-[#f8fafc] to-white dark:from-[#111d32] dark:to-[#0d1f3c] border border-border/50 dark:border-[#1e3351]/50 p-8 lg:p-10 transition-all duration-500 hover:shadow-xl hover:shadow-black/[0.03]",
 
   quoteWrapper: "mb-6",
   starsRow: "flex items-center gap-1 mb-5",

@@ -33,6 +33,10 @@ export function WhyChoose() {
             <img
               src="/images/manila-international-container-terminal-5.jpg"
               alt="Container ship connecting Visayas to the world's factory floor"
+              width={1200}
+              height={900}
+              loading="lazy"
+              decoding="async"
               className={whyChooseStyles.image}
             />
             <div className={whyChooseStyles.imageOverlay} />
@@ -53,7 +57,7 @@ export function WhyChoose() {
           <div className={whyChooseStyles.content}>
             <h2 className={whyChooseStyles.heading}>
               Why Choose{" "}
-              <span className="text-gradient-primary">Alpha Trade?</span>
+              <span className="text-[#1a73e8]">Alpha Trade?</span>
             </h2>
             <p className={whyChooseStyles.description}>
               We understand the unique challenges of Visayas businesses. Our

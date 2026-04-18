@@ -1,4 +1,4 @@
-import { Ship, Anchor, Package, Truck, ArrowUpRight, Handshake, LocateIcon, PlayCircle, LocationEdit, MapPinned } from "lucide-react";
+import { Ship, ArrowUpRight, Handshake, MapPinned } from "lucide-react";
 import { servicesStyles } from "./styles";
 
 const services = [
@@ -32,7 +32,7 @@ export function Services() {
         <div className={servicesStyles.headerWrapper}>
           <h2 className={servicesStyles.headerTitle}>
             Our{" "}
-            <span className="text-gradient-primary">Services</span>
+            <span className="text-[#1a73e8]">Services</span>
           </h2>
           <p className={servicesStyles.headerSubtitle}>
             We source and consolidate, clear customs, deliver to your door.
@@ -43,31 +43,30 @@ export function Services() {
         <div className={servicesStyles.grid}>
           {services.map((service, index) => {
             return (
-              <div
-                key={index}
-                className={`${servicesStyles.card} ${servicesStyles.cardDefault}`}
-              >
-                <div className={servicesStyles.cardContent}>
-                  <div className={servicesStyles.cardHeader}>
-                    <div
-                      className={`${servicesStyles.cardIcon} bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400`}
+              <div key={index} className={servicesStyles.cardShell}>
+                <div className={`${servicesStyles.card} ${servicesStyles.cardDefault}`}>
+                  <div className={servicesStyles.cardContent}>
+                    <div className={servicesStyles.cardHeader}>
+                      <div
+                        className={`${servicesStyles.cardIcon} bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400`}
+                      >
+                        <service.icon className="h-6 w-6" strokeWidth={1.5} />
+                      </div>
+
+                      <div className={servicesStyles.cardArrowDefault}>
+                        <ArrowUpRight className="h-4 w-4" />
+                      </div>
+                    </div>
+
+                    <h3
+                      className={`${servicesStyles.cardTitle} text-slate-900 dark:text-white`}
                     >
-                      <service.icon className="h-6 w-6" strokeWidth={1.5} />
-                    </div>
-
-                    <div className={servicesStyles.cardArrowDefault}>
-                      <ArrowUpRight className="h-4 w-4" />
-                    </div>
+                      {service.title}
+                    </h3>
+                    <p className={servicesStyles.cardDescription}>
+                      {service.description}
+                    </p>
                   </div>
-
-                  <h3
-                    className={`${servicesStyles.cardTitle} text-slate-900 dark:text-white`}
-                  >
-                    {service.title}
-                  </h3>
-                  <p className={servicesStyles.cardDescription}>
-                    {service.description}
-                  </p>
                 </div>
               </div>
             );

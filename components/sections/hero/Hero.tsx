@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Mail, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { heroStyles } from "./styles";
 
 export function Hero() {
@@ -32,7 +31,9 @@ export function Hero() {
         <div className={heroStyles.ctaRow}>
           <a href="#contact" className={heroStyles.primaryBtn}>
             Start Importing Now
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            <span className={heroStyles.primaryBtnIconWrap}>
+              <ArrowRight className={heroStyles.primaryBtnIcon} />
+            </span>
           </a>
         </div>
 
@@ -53,6 +54,9 @@ export function Hero() {
           <img
             src="/images/hero-shipping.png"
             alt="Aerial view of container ship at sea — Alpha Trade logistics"
+            width={1600}
+            height={1200}
+            fetchPriority="high"
             className={heroStyles.image}
           />
 

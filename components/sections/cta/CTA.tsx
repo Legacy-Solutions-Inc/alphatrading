@@ -68,8 +68,6 @@ export function CTA() {
         <div className={ctaStyles.wrapper}>
           {/* LEFT COLUMN - Contact Info */}
           <div className={ctaStyles.leftColumn}>
-            <div className={ctaStyles.leftGraphic} />
-
             <div className={ctaStyles.leftHeaderWrapper}>
               <h2 className={ctaStyles.title}>Get a Quote</h2>
               <p className={ctaStyles.subtitle}>
@@ -79,35 +77,35 @@ export function CTA() {
             </div>
 
             <div className={ctaStyles.leftContactWrapper}>
-              <div className={ctaStyles.contactItem}>
-                <div className={ctaStyles.contactIcon}>
+              <a href="tel:+639271422793" className={ctaStyles.contactItem}>
+                <span className={ctaStyles.contactIcon}>
                   <Phone className="h-5 w-5" />
-                </div>
+                </span>
                 <span className={ctaStyles.contactText}>
                   +63 927 142 2793
                 </span>
-              </div>
-              <div className={ctaStyles.contactItem}>
-                <div className={ctaStyles.contactIcon}>
+              </a>
+              <a href="mailto:sales@alphatrade.ph" className={ctaStyles.contactItem}>
+                <span className={ctaStyles.contactIcon}>
                   <Mail className="h-5 w-5" />
-                </div>
+                </span>
                 <span className={ctaStyles.contactText}>
                   sales@alphatrade.ph
                 </span>
-              </div>
-              <div className={ctaStyles.contactItem}>
-                <div className={ctaStyles.contactIcon}>
+              </a>
+              <a
+                href="https://facebook.com/alpha.trade.corp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={ctaStyles.contactItem}
+              >
+                <span className={ctaStyles.contactIcon}>
                   <MapPin className="h-5 w-5" />
-                </div>
-                <a
-                  href="https://facebook.com/alpha.trade.corp"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`${ctaStyles.contactText} hover:underline decoration-white/30 hover:text-white transition-colors cursor-pointer`}
-                >
+                </span>
+                <span className={`${ctaStyles.contactText} hover:underline decoration-white/30`}>
                   facebook.com/alpha.trade.corp
-                </a>
-              </div>
+                </span>
+              </a>
             </div>
           </div>
 
@@ -132,12 +130,12 @@ export function CTA() {
             ) : (
               <form className={ctaStyles.form} onSubmit={handleSubmit}>
                 {submitStatus === "error" && (
-                  <div className="p-4 bg-red-50 dark:bg-red-500/10 border border-red-200 dark:border-red-500/50 rounded-lg text-red-600 dark:text-red-400 text-sm mb-6 animate-in fade-in">
+                  <div className="p-4 bg-red-50 dark:bg-red-500/10 border border-red-200 dark:border-red-500/50 rounded-md text-red-600 dark:text-red-400 text-sm mb-6 animate-in fade-in">
                     Failed to send message. Please try again or contact us directly via email.
                   </div>
                 )}
                 {submitStatus === "rate_limited" && (
-                  <div className="p-4 bg-orange-50 dark:bg-orange-500/10 border border-orange-200 dark:border-orange-500/50 rounded-lg text-orange-600 dark:text-orange-400 text-sm mb-6 animate-in fade-in">
+                  <div className="p-4 bg-orange-50 dark:bg-orange-500/10 border border-orange-200 dark:border-orange-500/50 rounded-md text-orange-600 dark:text-orange-400 text-sm mb-6 animate-in fade-in">
                     You have reached the limit of 2 messages per hour. Please try again later or contact us directly.
                   </div>
                 )}

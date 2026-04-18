@@ -37,7 +37,7 @@ export function Testimonials() {
           <h2 className={testimonialsStyles.headerTitle}>
             Trusted by Businesses
             <br />
-            <span className="text-gradient-primary">Across Iloilo</span>
+            <span className="text-[#1a73e8]">Across Iloilo</span>
           </h2>
           <p className={testimonialsStyles.headerSubtitle}>
             Hear from the entrepreneurs and businesses who count on us for their

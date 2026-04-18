@@ -2,9 +2,6 @@ import {
   ShieldCheck,
   TrendingUp,
   Handshake,
-  Award,
-  BarChart3,
-  Users,
 } from "lucide-react";
 import { trustStyles } from "./styles";
 
@@ -29,18 +26,9 @@ const reasons = [
   }
 ];
 
-const stats = [
-  { icon: Award, value: "A+", label: "BOC Rating" },
-  { icon: BarChart3, value: "50K+", label: "TEUs Handled" },
-  { icon: Users, value: "500+", label: "Active Clients" },
-];
-
 export function Trust() {
   return (
     <section id="trust" className={trustStyles.section}>
-      <div className={trustStyles.orbRight} />
-      <div className={trustStyles.orbLeft} />
-
       <div className={trustStyles.container}>
         <div className={trustStyles.grid}>
           {/* Left - Image Composition */}
@@ -49,6 +37,10 @@ export function Trust() {
               <img
                 src="/images/trust-port.png"
                 alt="Container ship operations at port"
+                width={1200}
+                height={900}
+                loading="lazy"
+                decoding="async"
                 className={trustStyles.image}
               />
               <div className={trustStyles.imageOverlay} />
@@ -60,7 +52,7 @@ export function Trust() {
 
             <h2 className={trustStyles.title}>
               Partner with{" "}
-              <span className="text-gradient-primary">Alpha Trade</span>
+              <span className="text-[#1a73e8]">Alpha Trade</span>
               <br />
               for Seamless Growth
             </h2>

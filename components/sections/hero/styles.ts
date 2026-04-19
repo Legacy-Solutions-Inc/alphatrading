@@ -15,7 +15,7 @@ export const heroStyles = {
 
   // Heading
   heading:
-    "text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight leading-[1.08] text-[#0a1628] dark:text-white mb-5 lg:mb-6",
+    "text-4xl sm:text-5xl lg:text-7xl xl:text-8xl font-extrabold tracking-[-0.03em] leading-[0.95] text-[#0a1628] dark:text-white mb-5 lg:mb-6",
   headingBlue:
     "text-[#1a73e8]",
 

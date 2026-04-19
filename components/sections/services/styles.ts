@@ -1,12 +1,12 @@
 export const servicesStyles = {
-  section: "py-20 lg:py-32 bg-slate-50 dark:bg-[#030b17] relative overflow-hidden",
+  section: "py-24 lg:py-40 bg-slate-50 dark:bg-[#030b17] relative overflow-hidden",
   topBorder: "absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent",
 
   container: "container mx-auto px-6 lg:px-8 max-w-7xl relative z-10",
 
   // Header
   headerWrapper: "text-center max-w-2xl mx-auto mb-12 lg:mb-16",
-  headerTitle: "text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight mb-4",
+  headerTitle: "text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white tracking-[-0.02em] leading-[1.05] mb-5",
   headerSubtitle: "text-base md:text-lg text-slate-600 dark:text-slate-400 font-medium",
 
   // Cards grid

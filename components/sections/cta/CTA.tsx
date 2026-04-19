@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { Reveal } from "@/components/ui/reveal";
 import { ctaStyles } from "./styles";
 
 export function CTA() {
@@ -65,6 +66,7 @@ export function CTA() {
   return (
     <section id="contact" className={ctaStyles.section}>
       <div className={ctaStyles.container}>
+        <Reveal className={ctaStyles.shell}>
         <div className={ctaStyles.wrapper}>
           {/* LEFT COLUMN - Contact Info */}
           <div className={ctaStyles.leftColumn}>
@@ -198,6 +200,7 @@ export function CTA() {
             )}
           </div>
         </div>
+        </Reveal>
       </div>
     </section>
   );

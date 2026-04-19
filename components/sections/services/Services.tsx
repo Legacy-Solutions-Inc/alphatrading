@@ -1,4 +1,5 @@
 import { Ship, ArrowUpRight, Handshake, MapPinned } from "lucide-react";
+import { Reveal } from "@/components/ui/reveal";
 import { servicesStyles } from "./styles";
 
 const services = [
@@ -29,7 +30,7 @@ export function Services() {
 
       <div className={servicesStyles.container}>
         {/* Header */}
-        <div className={servicesStyles.headerWrapper}>
+        <Reveal className={servicesStyles.headerWrapper}>
           <h2 className={servicesStyles.headerTitle}>
             Our{" "}
             <span className="text-[#1a73e8]">Services</span>
@@ -37,13 +38,22 @@ export function Services() {
           <p className={servicesStyles.headerSubtitle}>
             We source and consolidate, clear customs, deliver to your door.
           </p>
-        </div>
+        </Reveal>
 
         {/* Service Cards */}
         <div className={servicesStyles.grid}>
           {services.map((service, index) => {
+            const cascade =
+              index === 0
+                ? "lg:-rotate-[0.6deg] lg:-translate-y-1"
+                : index === services.length - 1
+                ? "lg:rotate-[0.6deg] lg:-translate-y-1"
+                : "";
             return (
-              <div key={index} className={servicesStyles.cardShell}>
+              <Reveal key={index} delay={80 + index * 80}>
+                <div
+                  className={`${servicesStyles.cardShell} ${cascade} lg:hover:rotate-0 lg:hover:translate-y-0`}
+                >
                 <div className={`${servicesStyles.card} ${servicesStyles.cardDefault}`}>
                   <div className={servicesStyles.cardContent}>
                     <div className={servicesStyles.cardHeader}>
@@ -68,7 +78,8 @@ export function Services() {
                     </p>
                   </div>
                 </div>
-              </div>
+                </div>
+              </Reveal>
             );
           })}
         </div>

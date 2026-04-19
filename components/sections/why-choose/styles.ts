@@ -18,12 +18,13 @@ export const whyChooseStyles = {
 
   /* ── RIGHT: Content ── */
   content: "flex flex-col",
-  heading: "text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-5 leading-tight",
+  heading: "text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-[-0.02em] text-slate-900 dark:text-white mb-5 leading-[1.05]",
   description: "text-base md:text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-10 max-w-xl",
 
-  // Feature list
+  // Feature list — Doppelrand nested architecture
   featureList: "grid grid-cols-1 gap-4",
-  featureItem: "flex items-start gap-4 group p-5 rounded-2xl bg-white dark:bg-[#111d32] border border-slate-100 dark:border-slate-800 transition-all duration-300 hover:shadow-lg hover:shadow-slate-200/40 dark:hover:shadow-none hover:border-blue-100",
+  featureShell: "group rounded-[1.375rem] p-1.5 bg-slate-100/60 dark:bg-slate-800/30 ring-1 ring-slate-200/70 dark:ring-slate-700/50 transition-all duration-500 ease-[var(--ease-spring)] hover:ring-blue-200",
+  featureItem: "flex items-start gap-4 p-5 rounded-2xl bg-white dark:bg-[#111d32] ring-1 ring-slate-200/40 dark:ring-slate-700/30 shadow-[inset_0_1px_0_rgba(255,255,255,0.7),0_1px_2px_rgba(15,23,42,0.04)] dark:shadow-none transition-all duration-500 ease-[var(--ease-spring)] group-hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.7),0_8px_24px_-8px_rgba(15,23,42,0.12)]",
 
   featureIconWrapper: "flex-shrink-0 mt-1 text-[#1a73e8] transition-colors",
 

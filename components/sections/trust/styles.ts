@@ -1,5 +1,5 @@
 export const trustStyles = {
-  section: "py-20 lg:py-32 bg-white dark:bg-[#0a1628] relative overflow-hidden",
+  section: "py-24 lg:py-40 bg-white dark:bg-[#0a1628] relative overflow-hidden",
 
   container: "container mx-auto px-6 lg:px-8 max-w-7xl relative z-10",
   grid: "grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center",
@@ -12,12 +12,13 @@ export const trustStyles = {
 
   // Right - Content
   rightColumn: "order-1 lg:order-2",
-  title: "text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white mb-5 tracking-tight leading-[1.15]",
+  title: "text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white mb-5 tracking-[-0.02em] leading-[1.05]",
   subtitle: "text-base md:text-lg text-slate-600 dark:text-slate-400 mb-10 leading-relaxed",
 
-  // Reasons list (as premium cards)
+  // Reasons list — Doppelrand nested architecture
   reasonsList: "grid grid-cols-1 gap-4",
-  reasonItem: "flex flex-col sm:flex-row items-start gap-4 sm:gap-5 group p-5 sm:p-6 rounded-2xl bg-slate-50 dark:bg-[#111d32] border border-slate-100 dark:border-slate-800 transition-all duration-300 ease-out hover:shadow-lg hover:shadow-slate-200/40 dark:hover:shadow-none hover:bg-white dark:hover:bg-[#15233b]",
+  reasonShell: "group rounded-[1.375rem] p-1.5 bg-slate-100/60 dark:bg-slate-800/30 ring-1 ring-slate-200/70 dark:ring-slate-700/50 transition-all duration-500 ease-[var(--ease-spring)] hover:ring-blue-200",
+  reasonItem: "flex flex-col sm:flex-row items-start gap-4 sm:gap-5 p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#111d32] ring-1 ring-slate-200/40 dark:ring-slate-700/30 shadow-[inset_0_1px_0_rgba(255,255,255,0.7),0_1px_2px_rgba(15,23,42,0.04)] dark:shadow-none transition-all duration-500 ease-[var(--ease-spring)] group-hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.7),0_8px_24px_-8px_rgba(15,23,42,0.12)]",
 
   reasonIconWrapper: "flex-shrink-0 mt-1",
   reasonIcon: "text-[#1a73e8] transition-colors",

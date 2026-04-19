@@ -2,14 +2,17 @@ export const ctaStyles = {
   section: "py-20 lg:py-32 bg-slate-50 dark:bg-[#030b17] flex justify-center relative overflow-hidden",
   container: "container px-4 md:px-6 w-full max-w-5xl relative z-10",
 
-  // Wrapper - adding a card-like floating effect
-  wrapper: "flex flex-col md:flex-row bg-white dark:bg-[#0c182c] rounded-2xl overflow-hidden shadow-xl shadow-slate-200/50 dark:shadow-none border border-slate-200/60 dark:border-slate-800",
+  // Doppelrand shell wraps the entire form card
+  shell: "rounded-[1.625rem] p-1.5 bg-slate-100/70 dark:bg-slate-800/30 ring-1 ring-slate-200/70 dark:ring-slate-700/50 shadow-xl shadow-slate-200/40 dark:shadow-none",
+
+  // Inner wrapper — the actual form card
+  wrapper: "flex flex-col md:flex-row bg-white dark:bg-[#0c182c] rounded-[1.25rem] overflow-hidden ring-1 ring-slate-200/40 dark:ring-slate-700/30",
 
   /* --- LEFT COLUMN (Contact Info) --- */
   leftColumn: "relative w-full md:w-5/12 bg-gradient-to-br from-blue-700 to-indigo-900 text-white p-8 md:p-10 flex flex-col justify-between overflow-hidden",
 
   leftHeaderWrapper: "relative z-10 mb-12",
-  title: "text-2xl md:text-3xl lg:text-4xl font-extrabold text-white mb-3 tracking-tight leading-tight",
+  title: "text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-3 tracking-[-0.02em] leading-[1.05]",
   subtitle: "text-blue-100/90 text-[15px] leading-relaxed",
 
   leftContactWrapper: "relative z-10 space-y-6 mt-auto",

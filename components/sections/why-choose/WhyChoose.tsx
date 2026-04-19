@@ -1,4 +1,5 @@
 import { MapPin, Zap, TrendingDown } from "lucide-react";
+import { Reveal } from "@/components/ui/reveal";
 import { whyChooseStyles } from "./styles";
 
 const features = [
@@ -29,7 +30,7 @@ export function WhyChoose() {
         <div className={whyChooseStyles.grid}>
 
           {/* ── LEFT: Image card ── */}
-          <div className={whyChooseStyles.imageWrapper}>
+          <Reveal className={whyChooseStyles.imageWrapper}>
             <img
               src="/images/manila-international-container-terminal-5.jpg"
               alt="Container ship connecting Visayas to the world's factory floor"
@@ -51,10 +52,10 @@ export function WhyChoose() {
             <p className={whyChooseStyles.caption}>
               &ldquo;Connecting Visayas to the world&rsquo;s factory floor.&rdquo;
             </p>
-          </div>
+          </Reveal>
 
           {/* ── RIGHT: Content ── */}
-          <div className={whyChooseStyles.content}>
+          <Reveal delay={120} className={whyChooseStyles.content}>
             <h2 className={whyChooseStyles.heading}>
               Why Choose{" "}
               <span className="text-[#1a73e8]">Alpha Trade?</span>
@@ -67,22 +68,24 @@ export function WhyChoose() {
 
             <ul className={whyChooseStyles.featureList}>
               {features.map((feature, i) => (
-                <li key={i} className={whyChooseStyles.featureItem}>
-                  <div className={whyChooseStyles.featureIconWrapper}>
-                    <feature.icon className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <p className={whyChooseStyles.featureTitle}>
-                      {feature.title}
-                    </p>
-                    <p className={whyChooseStyles.featureDesc}>
-                      {feature.description}
-                    </p>
+                <li key={i} className={whyChooseStyles.featureShell}>
+                  <div className={whyChooseStyles.featureItem}>
+                    <div className={whyChooseStyles.featureIconWrapper}>
+                      <feature.icon className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <p className={whyChooseStyles.featureTitle}>
+                        {feature.title}
+                      </p>
+                      <p className={whyChooseStyles.featureDesc}>
+                        {feature.description}
+                      </p>
+                    </div>
                   </div>
                 </li>
               ))}
             </ul>
-          </div>
+          </Reveal>
 
         </div>
       </div>

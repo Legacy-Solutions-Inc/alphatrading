@@ -46,6 +46,7 @@
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
   --ease-spring: cubic-bezier(0.32, 0.72, 0, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 :root {
@@ -124,11 +125,63 @@
 
   body {
     @apply bg-background text-foreground;
+    position: relative;
+    isolation: isolate;
+  }
+
+  /* Mesh-gradient orbs — brand-tinted, institutional, not SaaS-neon */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background:
+      radial-gradient(60rem 45rem at 95% -10%, rgba(26, 115, 232, 0.07), transparent 60%),
+      radial-gradient(55rem 40rem at -5% 110%, rgba(12, 59, 106, 0.06), transparent 60%);
+  }
+
+  /* Grain / noise overlay — fixed, pointer-events-none, subtle film feel */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.04 0 0 0 0 0.09 0 0 0 0 0.16 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    mix-blend-mode: multiply;
   }
 }
 
 section {
   position: relative;
+  z-index: 1;
+}
+
+/* Entry-reveal utility — fade-up + blur dissipation */
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+[data-reveal=""] {
+  opacity: 0;
+  transform: translateY(2rem);
+  filter: blur(8px);
+  will-change: opacity, transform, filter;
+}
+
+[data-reveal="visible"] {
+  animation: reveal-up 0.8s var(--ease-out-expo) forwards;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -139,5 +192,13 @@ section {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+
+  [data-reveal=""],
+  [data-reveal="visible"] {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    animation: none !important;
   }
 }

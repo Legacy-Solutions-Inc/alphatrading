@@ -3,6 +3,7 @@ import {
   TrendingUp,
   Handshake,
 } from "lucide-react";
+import { Reveal } from "@/components/ui/reveal";
 import { trustStyles } from "./styles";
 
 const reasons = [
@@ -33,7 +34,7 @@ export function Trust() {
         <div className={trustStyles.grid}>
           {/* Left - Image Composition */}
           <div className={trustStyles.leftColumn}>
-            <div className={trustStyles.imageWrapper}>
+            <Reveal className={trustStyles.imageWrapper}>
               <img
                 src="/images/trust-port.png"
                 alt="Container ship operations at port"
@@ -44,11 +45,11 @@ export function Trust() {
                 className={trustStyles.image}
               />
               <div className={trustStyles.imageOverlay} />
-            </div>
+            </Reveal>
           </div>
 
           {/* Right - Content */}
-          <div className={trustStyles.rightColumn}>
+          <Reveal delay={120} className={trustStyles.rightColumn}>
 
             <h2 className={trustStyles.title}>
               Partner with{" "}
@@ -65,26 +66,28 @@ export function Trust() {
 
             <div className={trustStyles.reasonsList}>
               {reasons.map((reason, index) => (
-                <div key={index} className={trustStyles.reasonItem}>
-                  <div className={trustStyles.reasonIconWrapper}>
-                    <div className={trustStyles.reasonIcon}>
-                      <reason.icon className="h-6 w-6" />
+                <div key={index} className={trustStyles.reasonShell}>
+                  <div className={trustStyles.reasonItem}>
+                    <div className={trustStyles.reasonIconWrapper}>
+                      <div className={trustStyles.reasonIcon}>
+                        <reason.icon className="h-6 w-6" />
+                      </div>
                     </div>
-                  </div>
-                  <div className={trustStyles.reasonContent}>
-                    <div className={trustStyles.reasonHeader}>
-                      <h4 className={trustStyles.reasonTitle}>
-                        {reason.title}
-                      </h4>
+                    <div className={trustStyles.reasonContent}>
+                      <div className={trustStyles.reasonHeader}>
+                        <h4 className={trustStyles.reasonTitle}>
+                          {reason.title}
+                        </h4>
+                      </div>
+                      <p className={trustStyles.reasonDescription}>
+                        {reason.description}
+                      </p>
                     </div>
-                    <p className={trustStyles.reasonDescription}>
-                      {reason.description}
-                    </p>
                   </div>
                 </div>
               ))}
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

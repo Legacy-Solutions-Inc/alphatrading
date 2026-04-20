@@ -29,6 +29,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/images/alpha-icon.jpg",
   },
+  verification: {
+    google: "f02kKHVDr8ol1ChsEjNh1iXP2QtU1k9oxYlPaio_cAw",
+  },
 };
 
 export default function RootLayout({
